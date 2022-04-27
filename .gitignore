@@ -1,0 +1,14 @@
+#ignore the built project files on the root folder of the project
+*.zip
+*.jar
+
+
+#ignore target folder
+/target
+/build
+
+#ignore some ad stuff
+**.DS_Store
+
+#ignore idea files
+.idea
