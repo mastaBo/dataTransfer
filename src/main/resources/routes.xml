@@ -12,7 +12,7 @@
             <value>file:config/config.properties</value>
         </property>
     </bean>
-<!--    <propertyPlaceholder id="placeholder" location="classpath:config.properties"/>--> 
+<!--  <propertyPlaceholder id="placeholder" location="classpath:config.properties"/>-->
     
     <bean id="proc" class="bo.masta.datatransfer.DataProcessor" />
 
@@ -47,8 +47,8 @@
     <camelContext trace="true" xmlns="http://camel.apache.org/schema/spring">   
     
 <!--        <route>
-            <from uri="quartz2://myGroup/myTimerName?trigger.repeatCount=0" />
-            <to uri="http4://www.hobbycenter.ru/API/list.php?login=MPULXNRIKF&amp;type=xml&amp;code=products_all_new&amp;key=55af9f18c12483f15d14149299722836" />
+            <from uri="quartz://myGroup/myTimerName?trigger.repeatCount=0" />
+            <to uri="http://www.hobbycenter.ru/API/list.php?login=MPULXNRIKF&amp;type=xml&amp;code=products_all_new&amp;key=55af9f18c12483f15d14149299722836" />
             <to uri="xslt:transform.xsl" />
             
             <unmarshal ref="xstream-utf8" />
@@ -60,8 +60,8 @@
         <route>
 <!--            <from uri="file:src/data" />
             <convertBodyTo type="java.lang.String" />-->
-            <from uri="quartz2://myGroup/myTimerName?trigger.repeatCount=0" />
-            <to uri="http4://www.hobbycenter.ru/API/list.php?login=MPULXNRIKF&amp;type=xml&amp;code=products_all_new&amp;key=55af9f18c12483f15d14149299722836" />
+            <from uri="quartz://myGroup/myTimerName?trigger.repeatCount=0" />
+            <to uri="http://www.hobbycenter.ru/API/list.php?login=MPULXNRIKF&amp;type=xml&amp;code=products_all_new&amp;key=55af9f18c12483f15d14149299722836" />
             <to uri="xslt:transform.xsl" />
             <to uri="file:target/tmp" />
             <process ref="proc" />
@@ -71,7 +71,7 @@
             <!--<to uri="file:target/mesages"/>-->
         </route>
 <!--        <route>
-            <from uri="quartz2://myGroup/myTimerName?trigger.repeatCount=0" />
+            <from uri="quartz://myGroup/myTimerName?trigger.repeatCount=0" />
             <setBody>
                 <constant>select * from partnersStoreAmount</constant>
             </setBody>

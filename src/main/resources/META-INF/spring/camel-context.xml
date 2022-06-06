@@ -12,8 +12,7 @@
             <value>config.properties</value>
         </property>
     </bean>
-<!--    <propertyPlaceholder id="placeholder" location="classpath:config.properties"/>--> 
-    
+
     <bean id="proc" class="bo.masta.datatransfer.DataProcessor" />
 
 <!-- this is the JDBC data source which uses an in-memory only Apache Derby database -->
